@@ -231,6 +231,7 @@ class SearchEnglish(SearchLanguage):
     stopwords = english_stopwords
 
     def init(self, options):
+        super(SearchEnglish, self).init(options)
         if CSTEMMER:
             class Stemmer(CStemmer):
                 def stem(self, word):
